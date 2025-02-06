@@ -1,6 +1,8 @@
 package net.alec.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.alec.tutorialmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -32,6 +34,9 @@ public class TutorialMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        //registering the mod items
+        ModItems.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -42,9 +47,14 @@ public class TutorialMod
     private void commonSetup(final FMLCommonSetupEvent event){
 
     }
-    // Add the example block item to the building blocks tab
+    // Add item to the Ingredients tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ALEXANDRITE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.RAW_ALEXANDRITE);
+        }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

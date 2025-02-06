@@ -1,0 +1,9 @@
+//{
+//  "parent": "minecraft:item/generated",
+//  "textures": {
+//    "layer0": "tutorialmod:item/alexandrite"
+//  }
+//}
+here the parent generates a 3d-ish model from the
+2d item textures. layer0 is the item
+texture (location and name)
