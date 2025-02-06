@@ -52,7 +52,7 @@ public class TutorialMod
     }
     // Add item to the Ingredients tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
-        //how it works:----: if tab is this then add that.
+        //how it works:----: if tab is this then add that
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ALEXANDRITE);
         }
