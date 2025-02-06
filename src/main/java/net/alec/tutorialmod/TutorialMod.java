@@ -1,6 +1,7 @@
 package net.alec.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.alec.tutorialmod.block.ModBlocks;
 import net.alec.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -36,6 +37,8 @@ public class TutorialMod
 
         //registering the mod items
         ModItems.register(modEventBus);
+        //registering the mod blocks
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -49,11 +52,15 @@ public class TutorialMod
     }
     // Add item to the Ingredients tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
+        //how it works:----: if tab is this then add that
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ALEXANDRITE);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.RAW_ALEXANDRITE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
