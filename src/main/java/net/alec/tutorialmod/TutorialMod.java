@@ -55,10 +55,9 @@ public class TutorialMod
         //how it works:----: if tab is this then add that
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ALEXANDRITE);
-        }
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.RAW_ALEXANDRITE);
         }
+
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
         }
