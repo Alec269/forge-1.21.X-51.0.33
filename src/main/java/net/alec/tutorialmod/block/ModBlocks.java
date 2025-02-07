@@ -22,8 +22,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock(
     "alexandrite_block", ()-> new Block(BlockBehaviour.Properties.of()
     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
-
-
+//2nd Block
+  public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock(
+  "raw_alexandrite_block",()-> new Block(BlockBehaviour.Properties.of()
+.strength(4f).sound(SoundType.COPPER)));
+//3rd Block
 
 
 ///Preparation For adding blocks
