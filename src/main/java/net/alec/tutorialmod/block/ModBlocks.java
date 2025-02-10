@@ -27,15 +27,16 @@ public class ModBlocks {
 //2nd Block
   public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock(
   "raw_alexandrite_block",()-> new Block(BlockBehaviour.Properties.of()
-.strength(3.5f).sound(SoundType.COPPER)));
+.strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.COPPER)));
 //3rd Block
   public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock(
   "alexandrite_ore",()-> new DropExperienceBlock(UniformInt.of(1,5),BlockBehaviour.Properties.of()
-  .strength(3.5f).sound(SoundType.STONE))); // ^ xp drop Property  // ^ min and ^ max amount
+  .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.STONE))); // ^ xp drop Property  // ^ min and ^ max amount
 //4th Block
-public static final RegistryObject<Block> DEEPSLATE_ALEXANDRITE_ORE = registerBlock(
-"deepslate_alexandrite_ore",()-> new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
-.strength(5f).sound(SoundType.DEEPSLATE)));
+ public static final RegistryObject<Block>DEEPSLATE_ALEXANDRITE_ORE = registerBlock(
+ "deepslate_alexandrite_ore",()-> new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
+ .strength(5f).requiresCorrectToolForDrops().sound(SoundType.STONE))); // ^ xp drop Property  // ^ min and ^ max amount
+
 //5th
 
 
