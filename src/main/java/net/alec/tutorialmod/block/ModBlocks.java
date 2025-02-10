@@ -34,9 +34,8 @@ public class ModBlocks {
   .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.STONE))); // ^ xp drop Property  // ^ min and ^ max amount
 //4th Block
  public static final RegistryObject<Block>DEEPSLATE_ALEXANDRITE_ORE = registerBlock(
- "deepslate_alexandrite_ore",()-> new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
- .strength(5f).requiresCorrectToolForDrops().sound(SoundType.STONE))); // ^ xp drop Property  // ^ min and ^ max amount
-
+ "alexandrite_deepslate_ore",()-> new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
+ .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE))); // ^ xp drop Property  // ^ min and ^ max amount
 //5th
 
 
